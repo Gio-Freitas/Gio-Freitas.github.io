@@ -1,0 +1,51 @@
+.header {
+  /* tamanho máximo do site*/
+  max-width: 1200px;
+  /*margem interna para desgrudar os elementos*/
+  padding: 40px 20px;
+  /*centralizar os elementos indenpendente do tamanho da tela*/
+  margin: 0 auto;
+  /* para que os itens fiquem um do lado do outro */
+  display: flex;
+  /* espaço entre os itens, cada um em um canto*/
+  justify-content: space-between;
+  /*alinhar os itens ao centro um do outro*/
+  align-items: center;
+}
+
+.header-menu {
+  /* itens do menu, um do lado do outro*/
+  display: flex;
+  /* caso a tela diminua os itens que estão lado a lado quebrem e passem a ficar um embaixo do outro*/
+  flex-wrap: wrap;
+  /* distancia entre os itens do menu*/
+  gap: 10px;
+  /*se houver diminuição de tela os itens do menu sempre vão ficar ao centro*/
+  justify-content: center;
+}
+
+.header-menu a {
+  font-size: 1.125rem;
+  line-height: 1.3;
+  /*aumenta a area de clique com padding*/
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #141414;
+  /*pegar o tamanho correto do padding*/
+  display: block;
+}
+
+/* responsividade do site, se a tela chegar a 800px o cabeçario vai pro centro e o menu desce*/
+@media (max-width: 800px) {
+  .header {
+    flex-direction: column;
+    /*distancia entre os itens*/
+    gap: 40px;
+    padding: 20px;
+  }
+  .header a {
+    /*fundo para que o menu pareça um botão*/
+    background: #f5f5f5;
+    border-radius: 4px;
+  }
+}
